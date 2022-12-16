@@ -28,7 +28,6 @@ def plotPoint(image, center, color):
                      3)
     return image
 
-
 while(True):
     ret, image = cam.read()  # Capture video frame by frame
     # If frame is read correctly, ret is true
@@ -37,7 +36,7 @@ while(True):
         break
 
     # Converting image to grayscale
-    # gray = cv.cvtColor(image, cv.COLOR_BGR2GRAY)
+    gray = cv.cvtColor(image, cv.COLOR_BGR2GRAY)
 
     # Look for tags
     detections = dtcr.detect(gray)
